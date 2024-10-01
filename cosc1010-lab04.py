@@ -97,22 +97,23 @@ min_temps = [
 # Output the results of both calculations.
 
 maxtemp_sum = 0
-for temperature in max_temps:
-    maxtemp_sum = maxtemp_sum + temperature
+for temperatures in range(len(max_temps)):
+    maxtemp_sum += max_temps[temperatures]
 
-print(maxtemp_sum / len(temperature))
+print(maxtemp_sum / len(max_temps))
 
 mintemp_sum = 0
-for temperature in min_temps:
-    mintemps_sum = mintemp_sum + temperature
+for temperature in range(len(min_temps)):
+    mintemp_sum += min_temps[temperature]
 
-print(mintemp_sum / len(temperature))
+print(mintemp_sum / len(min_temps))
 
 # For the next part, determine the highest and lowest recorded temperatures.
 # HINT: You can find this information without using any logic or looping.
-max_temp.sort()
-min_temp.sort()
+max_temps.sort()
+min_temps.sort()
 
-print(max_temp(-1))
-print(min_temp(0))
-
+print(max_temps[0])
+print(max_temps[-1])
+print(min_temps[0])
+print(min_temps[-1])
